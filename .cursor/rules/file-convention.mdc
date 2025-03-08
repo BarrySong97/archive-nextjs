@@ -1,0 +1,102 @@
+---
+description: This document outlines the project's file structure and naming conventions. It serves as a guide for maintaining consistent code organization and naming patterns across the codebase.
+globs: 
+alwaysApply: false
+---
+# Project Structure and Naming Conventions
+
+## Directory Structure Overview
+
+├── app/ # Next.js App Router directory
+│ ├── (app)/ # Main application pages
+│ ├── (auth)/ # Authentication pages
+│ ├── (website)/ # Website pages
+│ └── api/ # API routes
+├── components/ # React components
+├── db/ # Database related files
+├── lib/ # Utility functions
+├── public/ # Static assets
+├── store/ # State management
+└── service/ # Business logic services
+## Naming Conventions
+
+### 1. Files
+- React Components: Use PascalCase
+  - Examples: `TodoList.tsx`, `GridDistortion.tsx`, `WorkspaceItem.tsx`
+- Utility Files: Use kebab-case
+  - Examples: `auth-client.ts`, `email-template.tsx`
+- Configuration Files: Use lowercase with standard extensions
+  - Examples: `tailwind.config.ts`, `next.config.ts`
+
+### 2. Directories
+- Feature-based Directories: Use PascalCase
+  - Examples: `Todo/`, `Layout/`
+- System Directories: Use lowercase
+  - Examples: `api/`, `lib/`, `public/`
+- Route Groups: Use parentheses
+  - Examples: `(auth)`, `(app)`, `(website)`
+
+### 3. API Routes
+- Follow RESTful naming patterns
+- Dynamic Routes: Use square brackets
+  - Example: `[id]`
+- Catch-all Routes: Use spread syntax
+  - Example: `[...all]`
+
+### 4. Component Organization
+- Feature-based Components:
+  ```
+  components/
+  ├── Todo/                # Feature-specific components
+  │   ├── TodoList.tsx
+  │   ├── TodoItem.tsx
+  │   └── DoneList.tsx
+  ├── layout/             # Layout components
+  └── common/             # Shared components
+  ```
+
+### 5. State Management
+- Store files should be feature-based
+- Use `.ts` extension
+- Name pattern: `{feature}Store.ts`
+- Examples: `todoStore.ts`, `workspaceStore.ts`
+
+### 6. Database Related
+- Services: `{feature}Service.ts`
+- Schema: `schema.ts`
+- Configuration: `drizzle.config.ts`
+
+## Best Practices
+
+1. Component Organization:
+- Group related components in feature folders
+- Keep common components separate
+- Use clear, descriptive names
+
+2. File Structure:
+- Maintain consistent file extensions (.tsx for components, .ts for utilities)
+- Keep related files close together
+- Use index files for cleaner imports when needed
+
+3. Naming Guidelines:
+- Be descriptive and clear
+- Avoid abbreviations
+- Use standard suffixes (Item, List, Form, etc.)
+- Keep names in English
+
+4. Route Organization:
+- Group related routes in appropriate directories
+- Use Next.js App Router conventions
+- Keep API routes separate from page routes
+
+5. Code Organization:
+- Separate business logic from UI components
+- Keep services in appropriate directories
+- Maintain clear separation of concerns
+
+This structure promotes:
+- Easy navigation
+- Clear code organization
+- Consistent naming patterns
+- Scalable architecture
+- Maintainable codebase

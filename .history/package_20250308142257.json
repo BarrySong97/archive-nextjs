@@ -1,0 +1,35 @@
+{
+  "name": "archive-cave-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroui/react": "^2.7.4",
+    "better-auth": "^1.2.3",
+    "drizzle-orm": "^0.40.0",
+    "framer-motion": "^12.4.10",
+    "next": "15.2.1",
+    "nodemailer": "^6.10.0",
+    "postgres": "^3.4.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20",
+    "drizzle-kit": "^0.30.5",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "3",
+    "typescript": "^5"
+  }
+}

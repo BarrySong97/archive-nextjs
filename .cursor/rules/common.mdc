@@ -1,0 +1,18 @@
+---
+description: common rules you should follow
+globs: 
+alwaysApply: true
+---
+
+- 使用pnpm instead of npm
+- 使用nextjs app directory模式
+- 注意组件是client组件或者server组件
+- Use TypeScript for all code; prefer interfaces over types.
+- Avoid enums; use objects or maps instead.
+- Avoid using any or unknown unless absolutely necessary. Look for type definitions in the codebase instead.
+- Avoid type assertions with as or !.
+- 如何涉及到state，先判断是组件内部的state还是全局state，如果是局部state就使用react useState就好
+- 如果是全局state那么就使用jotai来管来 文件都在根目录store里面
+- 调用接口请使用tanstack query来调用
+- 获取数据库定义的类型可以先查看  @schema.ts 有没有定义
+- always use await-to-js instaed try catch
